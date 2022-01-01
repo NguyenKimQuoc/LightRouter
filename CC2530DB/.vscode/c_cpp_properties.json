@@ -1,0 +1,63 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "IAR",
+            "defines": [
+                "SECURE=1",
+                "TC_LINKKEY_JOIN=",
+                "NV_INIT=",
+                "NV_RESTORE=",
+                "xZTOOL_P1=",
+                "xMT_TASK=",
+                "xMT_APP_FUNC=",
+                "xMT_SYS_FUNC=",
+                "xMT_ZDO_FUNC=",
+                "xMT_ZDO_MGMT=",
+                "xMT_APP_CNF_FUNC=",
+                "LEGACY_LCD_DEBUG=",
+                "LCD_SUPPORTED=DEBUG",
+                "MULTICAST_ENABLED=FALSE",
+                "ZCL_READ=",
+                "ZCL_WRITE=",
+                "ZCL_BASIC=",
+                "ZCL_IDENTIFY=",
+                "ZCL_SCENES=",
+                "ZCL_GROUPS="
+            ],
+            "includePath": [
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Projects\\zstack\\HomeAutomation\\MyApp\\CC2530DB",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Projects\\zstack\\HomeAutomation\\MyApp\\Source",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Projects\\zstack\\HomeAutomation\\Source",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Projects\\zstack\\ZMain\\TI2530DB",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\hal\\include",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\hal\\target\\CC2530EB",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\mac\\include",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\mac\\high_level",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\mac\\low_level\\srf04",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\mac\\low_level\\srf04\\single_chip",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\mt",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\osal\\include",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\services\\saddr",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\services\\sdata",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\stack\\af",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\stack\\bdb",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\stack\\gp",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\stack\\nwk",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\stack\\sapi",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\stack\\sec",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\stack\\sys",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\stack\\zcl",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\stack\\zdo",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\zmac",
+                "e:\\Texas Instruments\\Z-Stack 3.0.2\\Components\\zmac\\f8w"
+            ],
+            "forcedInclude": [],
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "compilerPath": "",
+            "intelliSenseMode": "msvc-x64",
+            "configurationProvider": "pluyckx.iar-vsc"
+        }
+    ]
+}

@@ -1,0 +1,1711 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               26/Dec/2021  21:37:14
+# Copyright 2004-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\Source\zcl_MyLight.c
+#    Command line       =  
+#        -f C:\Users\QUOCKI~1\AppData\Local\Temp\EW2BBB.tmp ("E:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\Source\zcl_MyLight.c" -lC
+#        "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\CoordinatorEB\List"
+#        -lA "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\CoordinatorEB\List"
+#        --diag_suppress Pe001,Pa010 -o "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\CoordinatorEB\Obj"
+#        -e --debug --core=plain --dptr=16,1 --data_model=large
+#        --code_model=banked --calling_convention=xdata_reentrant
+#        --place_constants=data_rom --nr_virtual_regs 16 --preinclude "E:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\Source\preinclude.h" -f
+#        "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg"
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+#        -DZDO_COORDINATOR -DRTR_NWK) -f "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DZDAPP_CONFIG_PAN_ID=0xFFFF -DNWK_START_DELAY=100
+#        -DEXTENDED_JOINING_RANDOM_MASK=0x007F -DBEACON_REQUEST_DELAY=100
+#        -DBEACON_REQ_DELAY_MASK=0x00FF -DLINK_STATUS_JITTER_MASK=0x007F
+#        -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_POLLED=3000
+#        -DNWK_INDIRECT_MSG_TIMEOUT=7 -DMAX_RREQ_ENTRIES=8
+#        -DAPSC_MAX_FRAME_RETRIES=3 -DNWK_MAX_DATA_RETRIES=2
+#        -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9 -DAPS_MAX_GROUPS=16
+#        -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
+#        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000
+#        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
+#        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
+#        -f "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\" -I "E:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\Source\" -I
+#        "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\Source\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\mt\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        -Ohz --require_prototypes)
+#    Locale             =  English_USA.1252
+#    List file          =  
+#        E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\CoordinatorEB\List\zcl_MyLight.lst
+#    Object file        =  
+#        E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\CoordinatorEB\Obj\zcl_MyLight.r51
+#
+###############################################################################
+
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf3
+   \   unsigned char volatile __sfr P0SEL
+   \                     P0SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+E:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\MyLight\Source\zcl_MyLight.c
+      1          #include <stdio.h>
+      2          #include <stdlib.h>
+      3          
+      4          #include "ZComDef.h"
+      5          #include "OSAL.h"
+      6          #include "AF.h"
+      7          #include "ZDApp.h"
+      8          #include "ZDObject.h"
+      9          #include "MT_SYS.h"
+     10          
+     11          #include "nwk_util.h"
+     12          
+     13          #include "zcl.h"
+     14          #include "zcl_general.h"
+     15          #include "zcl_ha.h"
+     16          #include "zcl_diagnostic.h"
+     17          #include "zcl_MyLight.h"
+     18          
+     19          #include "bdb.h"
+     20          #include "bdb_interface.h"
+     21          #include "gp_interface.h"
+     22          
+     23          
+     24          
+     25          #if defined ( INTER_PAN )
+     26          #if defined ( BDB_TL_INITIATOR )
+     27            #include "bdb_touchlink_initiator.h"
+     28          #endif // BDB_TL_INITIATOR
+     29          #if defined ( BDB_TL_TARGET )
+     30            #include "bdb_touchlink_target.h"
+     31          #endif // BDB_TL_TARGET
+     32          #endif // INTER_PAN
+     33          
+     34          #if defined ( BDB_TL_INITIATOR ) || defined ( BDB_TL_TARGET )
+     35            #include "bdb_touchlink.h"
+     36          #endif
+     37          
+     38          #include "onboard.h"
+     39          
+     40          /* HAL */
+     41          #include "hal_lcd.h"
+     42          #include "hal_led.h"
+     43          #include "hal_key.h"
+     44          
+     45          // my library
+     46          #include "uart.h"
+     47          #include "bitmasks.h"
+     48          #include "delay.h"
+     49          #include "dht22.h"
+     50          
+     51          /*********************************************************************
+     52           * MACROS
+     53           */
+     54          
+     55          
+     56          /*********************************************************************
+     57           * CONSTANTS
+     58           */
+     59          
+     60          
+     61          /*********************************************************************
+     62           * TYPEDEFS
+     63           */
+     64          
+     65          /*********************************************************************
+     66           * GLOBAL VARIABLES
+     67           */
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     68          byte zclMyLight_TaskID;
+   \                     zclMyLight_TaskID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     69          //int16 zclMyLight_MeasuredValue;
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     70          afAddrType_t zclMyLight_DstAddr;
+   \                     zclMyLight_DstAddr:
+   \   000000                DS 12
+   \   00000C                REQUIRE __INIT_XDATA_Z
+     71           
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     72          float HumidityValue;
+   \                     HumidityValue:
+   \   000000                DS 4
+   \   000004                REQUIRE __INIT_XDATA_Z
+     73          /*********************************************************************
+     74           * GLOBAL FUNCTIONS
+     75           */
+     76           void zclMyLight_ReportTemp( void );
+     77          /*********************************************************************
+     78           * LOCAL VARIABLES
+     79           */
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     80          uint8 SeqNum = 0;
+   \                     SeqNum:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     81          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     82          uint8 giGenAppScreenMode = GENERIC_MAINMODE;   // display the main screen mode first
+   \                     giGenAppScreenMode:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     83          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     84          uint8 gPermitDuration = 0;    // permit joining default to disabled
+   \                     gPermitDuration:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     85          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     86          devStates_t zclMyLight_NwkState = DEV_INIT;
+   \                     zclMyLight_NwkState:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for zclMyLight_NwkState>`
+   \   000001                REQUIRE __INIT_XDATA_I
+     87          
+     88          
+     89          /*********************************************************************
+     90           * LOCAL FUNCTIONS
+     91           */
+     92          static void zclMyLight_HandleKeys( byte shift, byte keys );
+     93          static void zclMyLight_BasicResetCB( void );
+     94          static void zclMyLight_ProcessIdentifyTimeChange( uint8 endpoint );
+     95          static void zclMyLight_BindNotification( bdbBindNotificationData_t *data );
+     96          #if ( defined ( BDB_TL_TARGET ) && (BDB_TOUCHLINK_CAPABILITY_ENABLED == TRUE) )
+     97          static void zclMyLight_ProcessTouchlinkTargetEnable( uint8 enable );
+     98          #endif
+     99          
+    100          static void zclMyLight_ProcessCommissioningStatus(bdbCommissioningModeMsg_t *bdbCommissioningModeMsg);
+    101          
+    102          // app display functions
+    103          //static void zclMyLight_LcdDisplayUpdate( void );
+    104          #ifdef LCD_SUPPORTED
+    105          static void zclMyLight_LcdDisplayMainMode( void );
+    106          static void zclMyLight_LcdDisplayHelpMode( void );
+    107          #endif
+    108          
+    109          // Functions to process ZCL Foundation incoming Command/Response messages
+    110          static void zclMyLight_ProcessIncomingMsg( zclIncomingMsg_t *msg );
+    111          #ifdef ZCL_READ
+    112          static uint8 zclMyLight_ProcessInReadRspCmd( zclIncomingMsg_t *pInMsg );
+    113          #endif
+    114          #ifdef ZCL_WRITE
+    115          static uint8 zclMyLight_ProcessInWriteRspCmd( zclIncomingMsg_t *pInMsg );
+    116          #endif
+    117          static uint8 zclMyLight_ProcessInDefaultRspCmd( zclIncomingMsg_t *pInMsg );
+    118          #ifdef ZCL_DISCOVER
+    119          static uint8 zclMyLight_ProcessInDiscCmdsRspCmd( zclIncomingMsg_t *pInMsg );
+    120          static uint8 zclMyLight_ProcessInDiscAttrsRspCmd( zclIncomingMsg_t *pInMsg );
+    121          static uint8 zclMyLight_ProcessInDiscAttrsExtRspCmd( zclIncomingMsg_t *pInMsg );
+    122          #endif
+    123          
+    124          static void zclSampleApp_BatteryWarningCB( uint8 voltLevel);
+    125          
+    126          /*********************************************************************
+    127           * STATUS STRINGS
+    128           */
+    129          #ifdef LCD_SUPPORTED
+    130          const char sDeviceName[]   = "  Generic App";
+    131          const char sClearLine[]    = " ";
+    132          const char sSwMyLight[]      = "SW1:GENAPP_TODO";  // MYLIGHT_TODO
+    133          const char sSwBDBMode[]     = "SW2: Start BDB";
+    134          char sSwHelp[]             = "SW4: Help       ";  // last character is * if NWK open
+    135          #endif
+    136          
+    137          /*********************************************************************
+    138           * ZCL General Profile Callback table
+    139           */
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+    140          static zclGeneral_AppCallbacks_t zclMyLight_CmdCallbacks =
+   \                     zclMyLight_CmdCallbacks:
+   \   000000                DS 24
+   \   000018                REQUIRE `?<Initializer for zclMyLight_CmdCallbacks>`
+   \   000018                REQUIRE __INIT_XDATA_I
+    141          {
+    142            zclMyLight_BasicResetCB,             // Basic Cluster Reset command
+    143            NULL,                                   // Identify Trigger Effect command
+    144            NULL,                                   // On/Off cluster commands
+    145            NULL,                                   // On/Off cluster enhanced command Off with Effect
+    146            NULL,                                   // On/Off cluster enhanced command On with Recall Global Scene
+    147            NULL,                                   // On/Off cluster enhanced command On with Timed Off
+    148          #ifdef ZCL_LEVEL_CTRL
+    149            NULL,                                   // Level Control Move to Level command
+    150            NULL,                                   // Level Control Move command
+    151            NULL,                                   // Level Control Step command
+    152            NULL,                                   // Level Control Stop command
+    153          #endif
+    154          #ifdef ZCL_GROUPS
+    155            NULL,                                   // Group Response commands
+    156          #endif
+    157          #ifdef ZCL_SCENES
+    158            NULL,                                  // Scene Store Request command
+    159            NULL,                                  // Scene Recall Request command
+    160            NULL,                                  // Scene Response command
+    161          #endif
+    162          #ifdef ZCL_ALARMS
+    163            NULL,                                  // Alarm (Response) commands
+    164          #endif
+    165          #ifdef SE_UK_EXT
+    166            NULL,                                  // Get Event Log command
+    167            NULL,                                  // Publish Event Log command
+    168          #endif
+    169            NULL,                                  // RSSI Location command
+    170            NULL                                   // RSSI Location Response command
+    171          };
+    172          
+    173          /*********************************************************************
+    174           * MYLIGHT_TODO: Add other callback structures for any additional application specific 
+    175           *       Clusters being used, see available callback structures below.
+    176           *
+    177           *       bdbTL_AppCallbacks_t 
+    178           *       zclApplianceControl_AppCallbacks_t 
+    179           *       zclApplianceEventsAlerts_AppCallbacks_t 
+    180           *       zclApplianceStatistics_AppCallbacks_t 
+    181           *       zclElectricalMeasurement_AppCallbacks_t 
+    182           *       zclGeneral_AppCallbacks_t 
+    183           *       zclGp_AppCallbacks_t 
+    184           *       zclHVAC_AppCallbacks_t 
+    185           *       zclLighting_AppCallbacks_t 
+    186           *       zclMS_AppCallbacks_t 
+    187           *       zclPollControl_AppCallbacks_t 
+    188           *       zclPowerProfile_AppCallbacks_t 
+    189           *       zclSS_AppCallbacks_t  
+    190           *
+    191           */
+    192          
+    193          /*********************************************************************
+    194           * @fn          zclMyLight_Init
+    195           *
+    196           * @brief       Initialization function for the zclGeneral layer.
+    197           *
+    198           * @param       none
+    199           *
+    200           * @return      none
+    201           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    202          void zclMyLight_Init( byte task_id )
+   \                     zclMyLight_Init:
+    203          {
+   \   000000   74F7         MOV       A,#-0x9
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV       A,R1
+    204            zclMyLight_TaskID = task_id;
+   \   000006   90....       MOV       DPTR,#zclMyLight_TaskID
+   \   000009   F0           MOVX      @DPTR,A
+    205          
+    206            // This app is part of the Home Automation Profile
+    207            bdb_RegisterSimpleDescriptor( &zclMyLight_SimpleDesc );
+   \   00000A                ; Setup parameters for call to function bdb_RegisterSimpleDescriptor
+   \   00000A   7A..         MOV       R2,#zclMyLight_SimpleDesc & 0xff
+   \   00000C   7B..         MOV       R3,#(zclMyLight_SimpleDesc >> 8) & 0xff
+   \   00000E   12....       LCALL     `??bdb_RegisterSimpleDescriptor::?relay`; Banked call to: bdb_RegisterSimpleDescriptor
+    208            
+    209            // Register the ZCL General Cluster Library callback functions
+    210            zclGeneral_RegisterCmdCallbacks( MYLIGHT_ENDPOINT, &zclMyLight_CmdCallbacks );
+   \   000011                ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
+   \   000011   7A..         MOV       R2,#zclMyLight_CmdCallbacks & 0xff
+   \   000013   7B..         MOV       R3,#(zclMyLight_CmdCallbacks >> 8) & 0xff
+   \   000015   7901         MOV       R1,#0x1
+   \   000017   12....       LCALL     `??zclGeneral_RegisterCmdCallbacks::?relay`; Banked call to: zclGeneral_RegisterCmdCallbacks
+    211            
+    212            // MYLIGHT_TODO: Register other cluster command callbacks here
+    213          
+    214            // Register the application's attribute list
+    215            zcl_registerAttrList( MYLIGHT_ENDPOINT, zclMyLight_NumAttributes, zclMyLight_Attrs );
+   \   00001A                ; Setup parameters for call to function zcl_registerAttrList
+   \   00001A   7C..         MOV       R4,#zclMyLight_Attrs & 0xff
+   \   00001C   7D..         MOV       R5,#(zclMyLight_Attrs >> 8) & 0xff
+   \   00001E   90....       MOV       DPTR,#zclMyLight_NumAttributes
+   \   000021   E4           CLR       A
+   \   000022   93           MOVC      A,@A+DPTR
+   \   000023   FA           MOV       R2,A
+   \   000024   7901         MOV       R1,#0x1
+   \   000026   12....       LCALL     `??zcl_registerAttrList::?relay`; Banked call to: zcl_registerAttrList
+    216          
+    217            // Register the Application to receive the unprocessed Foundation command/response messages
+    218            zcl_registerForMsg( zclMyLight_TaskID );
+   \   000029                ; Setup parameters for call to function zcl_registerForMsg
+   \   000029   90....       MOV       DPTR,#zclMyLight_TaskID
+   \   00002C   E0           MOVX      A,@DPTR
+   \   00002D   F9           MOV       R1,A
+   \   00002E   12....       LCALL     `??zcl_registerForMsg::?relay`; Banked call to: zcl_registerForMsg
+    219          
+    220          #ifdef ZCL_DISCOVER
+    221            // Register the application's command list
+    222            zcl_registerCmdList( MYLIGHT_ENDPOINT, zclCmdsArraySize, zclMyLight_Cmds );
+    223          #endif
+    224          
+    225            // Register low voltage NV memory protection application callback
+    226            RegisterVoltageWarningCB( zclSampleApp_BatteryWarningCB );
+   \   000031                ; Setup parameters for call to function RegisterVoltageWarningCB
+   \   000031   7A..         MOV       R2,#`??zclSampleApp_BatteryWarningCB::?relay` & 0xff
+   \   000033   7B..         MOV       R3,#(`??zclSampleApp_BatteryWarningCB::?relay` >> 8) & 0xff
+   \   000035   12....       LCALL     `??RegisterVoltageWarningCB::?relay`; Banked call to: RegisterVoltageWarningCB
+    227          
+    228            // Register for all key events - This app will handle all key events
+    229            RegisterForKeys( zclMyLight_TaskID );
+   \   000038                ; Setup parameters for call to function RegisterForKeys
+   \   000038   90....       MOV       DPTR,#zclMyLight_TaskID
+   \   00003B   E0           MOVX      A,@DPTR
+   \   00003C   F9           MOV       R1,A
+   \   00003D   12....       LCALL     `??RegisterForKeys::?relay`; Banked call to: RegisterForKeys
+    230          
+    231            bdb_RegisterCommissioningStatusCB( zclMyLight_ProcessCommissioningStatus );
+   \   000040                ; Setup parameters for call to function bdb_RegisterCommissioningStatusCB
+   \   000040   7A..         MOV       R2,#`??zclMyLight_ProcessCommissioningStatus::?relay` & 0xff
+   \   000042   7B..         MOV       R3,#(`??zclMyLight_ProcessCommissioningStatus::?relay` >> 8) & 0xff
+   \   000044   12....       LCALL     `??bdb_RegisterCommissioningStatusCB::?relay`; Banked call to: bdb_RegisterCommissioningStatusCB
+    232            bdb_RegisterIdentifyTimeChangeCB( zclMyLight_ProcessIdentifyTimeChange );
+   \   000047                ; Setup parameters for call to function bdb_RegisterIdentifyTimeChangeCB
+   \   000047   7A..         MOV       R2,#`??zclMyLight_ProcessIdentifyTimeChange::?relay` & 0xff
+   \   000049   7B..         MOV       R3,#(`??zclMyLight_ProcessIdentifyTimeChange::?relay` >> 8) & 0xff
+   \   00004B   12....       LCALL     `??bdb_RegisterIdentifyTimeChangeCB::?relay`; Banked call to: bdb_RegisterIdentifyTimeChangeCB
+    233            bdb_RegisterBindNotificationCB( zclMyLight_BindNotification );
+   \   00004E                ; Setup parameters for call to function bdb_RegisterBindNotificationCB
+   \   00004E   7A..         MOV       R2,#`??zclMyLight_BindNotification::?relay` & 0xff
+   \   000050   7B..         MOV       R3,#(`??zclMyLight_BindNotification::?relay` >> 8) & 0xff
+   \   000052   12....       LCALL     `??bdb_RegisterBindNotificationCB::?relay`; Banked call to: bdb_RegisterBindNotificationCB
+    234          
+    235          #if ( defined ( BDB_TL_TARGET ) && (BDB_TOUCHLINK_CAPABILITY_ENABLED == TRUE) )
+    236            bdb_RegisterTouchlinkTargetEnableCB( zclMyLight_ProcessTouchlinkTargetEnable );
+    237          #endif
+    238          
+    239          #ifdef ZCL_DIAGNOSTIC
+    240            // Register the application's callback function to read/write attribute data.
+    241            // This is only required when the attribute data format is unknown to ZCL.
+    242            zcl_registerReadWriteCB( MYLIGHT_ENDPOINT, zclDiagnostic_ReadWriteAttrCB, NULL );
+    243          
+    244            if ( zclDiagnostic_InitStats() == ZSuccess )
+    245            {
+    246              // Here the user could start the timer to save Diagnostics to NV
+    247            }
+    248          #endif
+    249          
+    250          
+    251          #ifdef LCD_SUPPORTED
+    252            HalLcdWriteString ( (char *)sDeviceName, HAL_LCD_LINE_3 );
+    253          #endif  // LCD_SUPPORTED
+    254            P0SEL = b00001100;                    // 0=GPIO 1=Peripheral (ADC, UART)
+   \   000055   75F30C       MOV       0xf3,#0xc
+    255          
+    256            P0SEL &= ~BV(6);
+   \   000058   53F3BF       ANL       0xf3,#0xbf
+    257            P0DIR |= BV(6);
+   \   00005B   43FD40       ORL       0xfd,#0x40
+    258            UART_Init();
+   \   00005E                ; Setup parameters for call to function UART_Init
+   \   00005E   12....       LCALL     `??UART_Init::?relay`; Banked call to: UART_Init
+    259            
+    260          //  if (DHT22_Measure())
+    261          //  {
+    262          //    UART_String("Sensor type DHT22 detected.");
+    263          //  }
+    264          //  else 
+    265          //  {  
+    266          //    UART_String("No sensor detected");
+    267          //  }
+    268            
+    269            osal_start_reload_timer( zclMyLight_TaskID, MYLIGHT_REPORTING_EVT, 3000 );
+   \   000061                ; Setup parameters for call to function osal_start_reload_timer
+   \   000061   90....       MOV       DPTR,#__Constant_bb8
+   \   000064   12....       LCALL     ?PUSH_XSTACK8_X_FOUR
+   \   000067   7A08         MOV       R2,#0x8
+   \   000069   7B00         MOV       R3,#0x0
+   \   00006B   90....       MOV       DPTR,#zclMyLight_TaskID
+   \   00006E   E0           MOVX      A,@DPTR
+   \   00006F   F9           MOV       R1,A
+   \   000070   12....       LCALL     `??osal_start_reload_timer::?relay`; Banked call to: osal_start_reload_timer
+   \   000073   7404         MOV       A,#0x4
+   \   000075   12....       LCALL     ?DEALLOC_XSTACK8
+    270            UART_String("start");
+   \   000078                ; Setup parameters for call to function UART_String
+   \   000078   7A..         MOV       R2,#`?<Constant "start">` & 0xff
+   \   00007A   7B..         MOV       R3,#(`?<Constant "start">` >> 8) & 0xff
+   \   00007C   12....       LCALL     `??UART_String::?relay`; Banked call to: UART_String
+    271            bdb_StartCommissioning(BDB_COMMISSIONING_MODE_NWK_STEERING |
+    272                                   BDB_COMMISSIONING_MODE_FINDING_BINDING);
+   \   00007F                ; Setup parameters for call to function bdb_StartCommissioning
+   \   00007F   790A         MOV       R1,#0xa
+   \   000081   12....       LCALL     `??bdb_StartCommissioning::?relay`; Banked call to: bdb_StartCommissioning
+    273          }
+   \   000084   7F01         MOV       R7,#0x1
+   \   000086   02....       LJMP      ?BANKED_LEAVE_XDATA
+   \   000089                REQUIRE P0SEL
+   \   000089                REQUIRE P0DIR
+    274          
+    275          /*********************************************************************
+    276           * @fn          zclSample_event_loop
+    277           *
+    278           * @brief       Event Loop Processor for zclGeneral.
+    279           *
+    280           * @param       none
+    281           *
+    282           * @return      none
+    283           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    284          uint16 zclMyLight_event_loop( uint8 task_id, uint16 events )
+   \                     zclMyLight_event_loop:
+    285          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000   74F4         MOV       A,#-0xc
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV       A,R2
+   \   000006   FE           MOV       R6,A
+   \   000007   EB           MOV       A,R3
+   \   000008   FF           MOV       R7,A
+    286            afIncomingMSGPacket_t *MSGpkt;
+    287          
+    288            (void)task_id;  // Intentionally unreferenced parameter
+    289          
+    290            if ( events & SYS_EVENT_MSG )
+   \   000009   5480         ANL       A,#0x80
+   \   00000B   7034         JNZ       ??zclMyLight_event_loop_0
+    291            {
+    292              while ( (MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( zclMyLight_TaskID )) )
+    293              {
+    294                switch ( MSGpkt->hdr.event )
+    295                {
+    296                  case ZCL_INCOMING_MSG:
+    297                    // Incoming ZCL Foundation command/response messages
+    298                    zclMyLight_ProcessIncomingMsg( (zclIncomingMsg_t *)MSGpkt );
+    299                    break;
+    300          
+    301                  case KEY_CHANGE:
+    302                    zclMyLight_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+    303                    break;
+    304          
+    305                  case ZDO_STATE_CHANGE:
+    306                    zclMyLight_NwkState = (devStates_t)(MSGpkt->hdr.status);
+    307          
+    308                    // now on the network
+    309                    if ( (zclMyLight_NwkState == DEV_ZB_COORD) ||
+    310                         (zclMyLight_NwkState == DEV_ROUTER)   ||
+    311                         (zclMyLight_NwkState == DEV_END_DEVICE) )
+    312                    {
+    313                      giGenAppScreenMode = GENERIC_MAINMODE;
+    314          //            zclMyLight_LcdDisplayUpdate();
+    315                    }
+    316                    break;
+    317          
+    318                  default:
+    319                    break;
+    320                }
+    321          
+    322                // Release the memory
+    323                osal_msg_deallocate( (uint8 *)MSGpkt );
+    324              }
+    325          
+    326              // return unprocessed events
+    327              return (events ^ SYS_EVENT_MSG);
+    328            }
+    329          
+    330            if ( events & MYLIGHT_MAIN_SCREEN_EVT )
+   \   00000D   EA           MOV       A,R2
+   \   00000E   A2E0         MOV       C,0xE0 /* A   */.0
+   \   000010   4003         JC        $+5
+   \   000012   02....       LJMP      ??zclMyLight_event_loop_1 & 0xFFFF
+    331            {
+    332              giGenAppScreenMode = GENERIC_MAINMODE;
+   \   000015   90....       MOV       DPTR,#giGenAppScreenMode
+   \   000018   E4           CLR       A
+   \   000019   F0           MOVX      @DPTR,A
+    333          
+    334          
+    335              return ( events ^ MYLIGHT_MAIN_SCREEN_EVT );
+   \   00001A   EA           MOV       A,R2
+   \   00001B   6401         XRL       A,#0x1
+   \   00001D   FA           MOV       R2,A
+   \   00001E   02....       LJMP      ??zclMyLight_event_loop_2 & 0xFFFF
+    336            }
+   \                     ??zclMyLight_event_loop_3:
+   \   000021   A3           INC       DPTR
+   \   000022   E0           MOVX      A,@DPTR
+   \   000023   90....       MOV       DPTR,#zclMyLight_NwkState
+   \   000026   F0           MOVX      @DPTR,A
+   \   000027   6409         XRL       A,#0x9
+   \   000029   600A         JZ        ??zclMyLight_event_loop_4
+   \   00002B   E0           MOVX      A,@DPTR
+   \   00002C   6407         XRL       A,#0x7
+   \   00002E   6005         JZ        ??zclMyLight_event_loop_4
+   \   000030   E0           MOVX      A,@DPTR
+   \   000031   6406         XRL       A,#0x6
+   \   000033   7005         JNZ       ??zclMyLight_event_loop_5
+   \                     ??zclMyLight_event_loop_4:
+   \   000035   90....       MOV       DPTR,#giGenAppScreenMode
+   \   000038   E4           CLR       A
+   \   000039   F0           MOVX      @DPTR,A
+   \                     ??zclMyLight_event_loop_5:
+   \   00003A                ; Setup parameters for call to function osal_msg_deallocate
+   \   00003A   AA..         MOV       R2,?V0
+   \   00003C   AB..         MOV       R3,?V1
+   \   00003E   12....       LCALL     `??osal_msg_deallocate::?relay`; Banked call to: osal_msg_deallocate
+   \                     ??zclMyLight_event_loop_0:
+   \   000041                ; Setup parameters for call to function osal_msg_receive
+   \   000041   90....       MOV       DPTR,#zclMyLight_TaskID
+   \   000044   E0           MOVX      A,@DPTR
+   \   000045   F9           MOV       R1,A
+   \   000046   12....       LCALL     `??osal_msg_receive::?relay`; Banked call to: osal_msg_receive
+   \   000049   8A..         MOV       ?V0,R2
+   \   00004B   8B..         MOV       ?V1,R3
+   \   00004D   EA           MOV       A,R2
+   \   00004E   4B           ORL       A,R3
+   \   00004F   7003         JNZ       $+5
+   \   000051   02....       LJMP      ??zclMyLight_event_loop_6 & 0xFFFF
+   \   000054   8A82         MOV       DPL,R2
+   \   000056   8B83         MOV       DPH,R3
+   \   000058   E0           MOVX      A,@DPTR
+   \   000059   24CC         ADD       A,#-0x34
+   \   00005B   600A         JZ        ??zclMyLight_event_loop_7
+   \   00005D   2474         ADD       A,#0x74
+   \   00005F   604D         JZ        ??zclMyLight_event_loop_8
+   \   000061   24EF         ADD       A,#-0x11
+   \   000063   60BC         JZ        ??zclMyLight_event_loop_3
+   \   000065   80D3         SJMP      ??zclMyLight_event_loop_5
+   \                     ??zclMyLight_event_loop_7:
+   \   000067   EA           MOV       A,R2
+   \   000068   2417         ADD       A,#0x17
+   \   00006A   F8           MOV       R0,A
+   \   00006B   E4           CLR       A
+   \   00006C   35..         ADDC      A,?V1
+   \   00006E   F9           MOV       R1,A
+   \   00006F   E8           MOV       A,R0
+   \   000070   FA           MOV       R2,A
+   \   000071   E9           MOV       A,R1
+   \   000072   FB           MOV       R3,A
+   \   000073   A3           INC       DPTR
+   \   000074   A3           INC       DPTR
+   \   000075   A3           INC       DPTR
+   \   000076   A3           INC       DPTR
+   \   000077   A3           INC       DPTR
+   \   000078   A3           INC       DPTR
+   \   000079   A3           INC       DPTR
+   \   00007A   E0           MOVX      A,@DPTR
+   \   00007B   14           DEC       A
+   \   00007C   6011         JZ        ??zclMyLight_event_loop_9
+   \   00007E   24FD         ADD       A,#-0x3
+   \   000080   701A         JNZ       ??zclMyLight_event_loop_10
+   \   000082   12....       LCALL     ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
+   \   000085   E0           MOVX      A,@DPTR
+   \   000086   F9           MOV       R1,A
+   \   000087   E8           MOV       A,R0
+   \   000088   C3           CLR       C
+   \   000089   99           SUBB      A,R1
+   \   00008A   5010         JNC       ??zclMyLight_event_loop_10
+   \   00008C   08           INC       R0
+   \   00008D   80F6         SJMP      ??CrossCallReturnLabel_2
+   \                     ??zclMyLight_event_loop_9:
+   \   00008F   12....       LCALL     ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_3:
+   \   000092   8001         SJMP      ??zclMyLight_event_loop_11
+   \                     ??zclMyLight_event_loop_12:
+   \   000094   08           INC       R0
+   \                     ??zclMyLight_event_loop_11:
+   \   000095   E0           MOVX      A,@DPTR
+   \   000096   F9           MOV       R1,A
+   \   000097   E8           MOV       A,R0
+   \   000098   C3           CLR       C
+   \   000099   99           SUBB      A,R1
+   \   00009A   40F8         JC        ??zclMyLight_event_loop_12
+   \                     ??zclMyLight_event_loop_10:
+   \   00009C   8A82         MOV       DPL,R2
+   \   00009E   8B83         MOV       DPH,R3
+   \   0000A0   E0           MOVX      A,@DPTR
+   \   0000A1   FA           MOV       R2,A
+   \   0000A2   A3           INC       DPTR
+   \   0000A3   E0           MOVX      A,@DPTR
+   \   0000A4   FB           MOV       R3,A
+   \   0000A5   EA           MOV       A,R2
+   \   0000A6   4B           ORL       A,R3
+   \   0000A7   6091         JZ        ??zclMyLight_event_loop_5
+   \   0000A9                ; Setup parameters for call to function osal_mem_free
+   \   0000A9   12....       LCALL     `??osal_mem_free::?relay`; Banked call to: osal_mem_free
+   \   0000AC   808C         SJMP      ??zclMyLight_event_loop_5
+   \                     ??zclMyLight_event_loop_8:
+   \   0000AE   A3           INC       DPTR
+   \   0000AF   A3           INC       DPTR
+   \   0000B0   A3           INC       DPTR
+   \   0000B1   E0           MOVX      A,@DPTR
+   \   0000B2   F5..         MOV       ?V2,A
+   \   0000B4   A2E0         MOV       C,0xE0 /* A   */.0
+   \   0000B6   500D         JNC       ??zclMyLight_event_loop_13
+   \   0000B8   A880         MOV       R0,0x80+0x0
+   \   0000BA   D2F0         SETB      B.0
+   \   0000BC   E8           MOV       A,R0
+   \   0000BD   A2E6         MOV       C,0xE0 /* A   */.6
+   \   0000BF   30F001       JNB       B.0,??zclMyLight_event_loop_14
+   \   0000C2   B3           CPL       C
+   \                     ??zclMyLight_event_loop_14:
+   \   0000C3   9286         MOV       0x80.6,C
+   \                     ??zclMyLight_event_loop_13:
+   \   0000C5   E5..         MOV       A,?V2
+   \   0000C7   A2E1         MOV       C,0xE0 /* A   */.1
+   \   0000C9   500A         JNC       ??zclMyLight_event_loop_15
+   \   0000CB   90....       MOV       DPTR,#giGenAppScreenMode
+   \   0000CE   E4           CLR       A
+   \   0000CF   F0           MOVX      @DPTR,A
+   \   0000D0                ; Setup parameters for call to function bdb_StartCommissioning
+   \   0000D0   790F         MOV       R1,#0xf
+   \   0000D2   12....       LCALL     `??bdb_StartCommissioning::?relay`; Banked call to: bdb_StartCommissioning
+   \                     ??zclMyLight_event_loop_15:
+   \   0000D5   E5..         MOV       A,?V2
+   \   0000D7   A2E4         MOV       C,0xE0 /* A   */.4
+   \   0000D9   5005         JNC       ??zclMyLight_event_loop_16
+   \   0000DB   90....       MOV       DPTR,#giGenAppScreenMode
+   \   0000DE   E4           CLR       A
+   \   0000DF   F0           MOVX      @DPTR,A
+   \                     ??zclMyLight_event_loop_16:
+   \   0000E0   E5..         MOV       A,?V2
+   \   0000E2   A2E3         MOV       C,0xE0 /* A   */.3
+   \   0000E4   500C         JNC       ??zclMyLight_event_loop_17
+   \   0000E6   90....       MOV       DPTR,#giGenAppScreenMode
+   \   0000E9   E0           MOVX      A,@DPTR
+   \   0000EA   6003         JZ        ??zclMyLight_event_loop_18
+   \   0000EC   E4           CLR       A
+   \   0000ED   8002         SJMP      ??zclMyLight_event_loop_19
+   \                     ??zclMyLight_event_loop_18:
+   \   0000EF   7401         MOV       A,#0x1
+   \                     ??zclMyLight_event_loop_19:
+   \   0000F1   F0           MOVX      @DPTR,A
+   \                     ??zclMyLight_event_loop_17:
+   \   0000F2   E5..         MOV       A,?V2
+   \   0000F4   A2E2         MOV       C,0xE0 /* A   */.2
+   \   0000F6   4003         JC        $+5
+   \   0000F8   02....       LJMP      ??zclMyLight_event_loop_5 & 0xFFFF
+   \   0000FB                ; Setup parameters for call to function bdb_resetLocalAction
+   \   0000FB   12....       LCALL     `??bdb_resetLocalAction::?relay`; Banked call to: bdb_resetLocalAction
+   \   0000FE   02....       LJMP      ??zclMyLight_event_loop_5 & 0xFFFF
+   \                     ??zclMyLight_event_loop_6:
+   \   000101   EE           MOV       A,R6
+   \   000102   FA           MOV       R2,A
+   \   000103   EF           MOV       A,R7
+   \   000104   6480         XRL       A,#0x80
+   \   000106   800C         SJMP      ??zclMyLight_event_loop_20
+    337            
+    338          #if ZG_BUILD_ENDDEVICE_TYPE    
+    339            if ( events & MYLIGHT_END_DEVICE_REJOIN_EVT )
+    340            {
+    341              bdb_ZedAttemptRecoverNwk();
+    342              return ( events ^ MYLIGHT_END_DEVICE_REJOIN_EVT );
+    343            }
+    344          #endif
+    345          
+    346            /* MYLIGHT_TODO: handle app events here */
+    347            
+    348          //  if ( events & MYLIGHT_EVT_LONG )
+    349          //  {
+    350          //    if ( bdbAttributes.bdbNodeIsOnANetwork )
+    351          //    {
+    352          //      zclMyLight_LeaveNetwork();
+    353          //    }
+    354          //    else 
+    355          //    {
+    356          //      bdb_StartCommissioning(
+    357          //        BDB_COMMISSIONING_MODE_NWK_FORMATION | 
+    358          //        BDB_COMMISSIONING_MODE_NWK_STEERING | 
+    359          //        BDB_COMMISSIONING_MODE_FINDING_BINDING | 
+    360          //        BDB_COMMISSIONING_MODE_INITIATOR_TL
+    361          //      );
+    362          //    }
+    363          //    
+    364          //    return ( events ^ MYLIGHT_EVT_LONG );
+    365          //  }
+    366            
+    367            if ( events & MYLIGHT_REPORTING_EVT )
+   \                     ??zclMyLight_event_loop_1:
+   \   000108   5408         ANL       A,#0x8
+   \   00010A   600B         JZ        ??zclMyLight_event_loop_21
+    368            {
+    369              // toggle LED 2 state, start another timer for 500ms
+    370              //HalLedSet ( HAL_LED_2, HAL_LED_MODE_TOGGLE );
+    371              //osal_start_timerEx( zclMyLight_TaskID, MYLIGHT_REPORTING_EVT, 3000 );
+    372          //    P0_6 = ~P0_6;
+    373          //    DHT22_Measure();
+    374              zclMyLight_ReportTemp();
+   \   00010C                ; Setup parameters for call to function zclMyLight_ReportTemp
+   \   00010C   12....       LCALL     `??zclMyLight_ReportTemp::?relay`; Banked call to: zclMyLight_ReportTemp
+    375              return ( events ^ MYLIGHT_REPORTING_EVT );
+   \   00010F   EE           MOV       A,R6
+   \   000110   6408         XRL       A,#0x8
+   \   000112   FA           MOV       R2,A
+   \   000113   EF           MOV       A,R7
+   \                     ??zclMyLight_event_loop_20:
+   \   000114   FB           MOV       R3,A
+   \   000115   8004         SJMP      ??zclMyLight_event_loop_2
+    376            }
+    377            
+    378            /*
+    379            if ( events & MYLIGHT_EVT_2 )
+    380            {
+    381              DHT22_Measure();
+    382              return ( events ^ MYLIGHT_EVT_2 );
+    383            }
+    384            
+    385            if ( events & MYLIGHT_EVT_3 )
+    386            {
+    387              
+    388              return ( events ^ MYLIGHT_EVT_3 );
+    389            }
+    390            */
+    391            
+    392            // Discard unknown events
+    393            return 0;
+   \                     ??zclMyLight_event_loop_21:
+   \   000117   7A00         MOV       R2,#0x0
+   \   000119   7B00         MOV       R3,#0x0
+   \                     ??zclMyLight_event_loop_2:
+   \   00011B                REQUIRE ?Subroutine0
+   \   00011B                REQUIRE _A_P0
+   \   00011B                ; // Fall through to label ?Subroutine0
+    394          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7F04         MOV       R7,#0x4
+   \   000002   02....       LJMP      ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   8882         MOV       DPL,R0
+   \   000002   8983         MOV       DPH,R1
+   \   000004   E0           MOVX      A,@DPTR
+   \   000005   F8           MOV       R0,A
+   \   000006   A3           INC       DPTR
+   \   000007   E0           MOVX      A,@DPTR
+   \   000008   8882         MOV       DPL,R0
+   \   00000A   F583         MOV       DPH,A
+   \   00000C   7800         MOV       R0,#0x0
+   \   00000E   22           RET
+    395          
+    396          
+    397          /*********************************************************************
+    398           * @fn      zclMyLight_HandleKeys
+    399           *
+    400           * @brief   Handles all key events for this device.
+    401           *
+    402           * @param   shift - true if in shift/alt.
+    403           * @param   keys - bit field for key events. Valid entries:
+    404           *                 HAL_KEY_SW_5
+    405           *                 HAL_KEY_SW_4
+    406           *                 HAL_KEY_SW_2
+    407           *                 HAL_KEY_SW_1
+    408           *
+    409           * @return  none
+    410           */
+    411          static void zclMyLight_HandleKeys( byte shift, byte keys )
+    412          {
+    413            if ( keys & HAL_KEY_SW_1 )
+    414            {
+    415              P0_6 = ~P0_6;
+    416            }
+    417            // Start the BDB commissioning method
+    418            if ( keys & HAL_KEY_SW_2 )
+    419            {
+    420              giGenAppScreenMode = GENERIC_MAINMODE;
+    421          
+    422              bdb_StartCommissioning(BDB_COMMISSIONING_MODE_NWK_FORMATION | BDB_COMMISSIONING_MODE_NWK_STEERING | BDB_COMMISSIONING_MODE_FINDING_BINDING | BDB_COMMISSIONING_MODE_INITIATOR_TL);
+    423            }
+    424            if ( keys & HAL_KEY_SW_3 )
+    425            {
+    426              giGenAppScreenMode = GENERIC_MAINMODE;
+    427            
+    428              // touchlink target commissioning, if enabled  
+    429          #if ( defined ( BDB_TL_TARGET ) && (BDB_TOUCHLINK_CAPABILITY_ENABLED == TRUE) )
+    430              bdb_StartCommissioning(BDB_COMMISSIONING_MODE_FINDING_BINDING);
+    431              touchLinkTarget_EnableCommissioning( 30000 );
+    432          #endif
+    433              
+    434            }
+    435            if ( keys & HAL_KEY_SW_4 )
+    436            {
+    437              
+    438             giGenAppScreenMode = giGenAppScreenMode ? GENERIC_MAINMODE : GENERIC_HELPMODE;
+    439          #ifdef LCD_SUPPORTED
+    440              HalLcdWriteString( (char *)sClearLine, HAL_LCD_LINE_2 );
+    441          #endif
+    442              
+    443            }
+    444            if ( keys & HAL_KEY_SW_5 )
+    445            {
+    446              bdb_resetLocalAction();
+    447            }
+    448          }
+    449          
+    450          
+    451          /*********************************************************************
+    452           * @fn      zclMyLight_ProcessCommissioningStatus
+    453           *
+    454           * @brief   Callback in which the status of the commissioning process are reported
+    455           *
+    456           * @param   bdbCommissioningModeMsg - Context message of the status of a commissioning process
+    457           *
+    458           * @return  none
+    459           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    460          static void zclMyLight_ProcessCommissioningStatus(bdbCommissioningModeMsg_t *bdbCommissioningModeMsg)
+   \                     zclMyLight_ProcessCommissioningStatus:
+    461          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    462            switch(bdbCommissioningModeMsg->bdbCommissioningMode)
+   \   000004   8A82         MOV       DPL,R2
+   \   000006   8B83         MOV       DPH,R3
+   \   000008   A3           INC       DPTR
+   \   000009   E0           MOVX      A,@DPTR
+   \   00000A   6402         XRL       A,#0x2
+   \   00000C   7010         JNZ       ??zclMyLight_ProcessCommissioningStatus_0
+    463            {
+    464              case BDB_COMMISSIONING_FORMATION:
+    465                if(bdbCommissioningModeMsg->bdbCommissioningStatus == BDB_COMMISSIONING_SUCCESS)
+   \   00000E   8A82         MOV       DPL,R2
+   \   000010   8B83         MOV       DPH,R3
+   \   000012   E0           MOVX      A,@DPTR
+   \   000013   7009         JNZ       ??zclMyLight_ProcessCommissioningStatus_0
+    466                {
+    467                  //After formation, perform nwk steering again plus the remaining commissioning modes that has not been process yet
+    468                  bdb_StartCommissioning(BDB_COMMISSIONING_MODE_NWK_STEERING | bdbCommissioningModeMsg->bdbRemainingCommissioningModes);
+   \   000015                ; Setup parameters for call to function bdb_StartCommissioning
+   \   000015   A3           INC       DPTR
+   \   000016   A3           INC       DPTR
+   \   000017   E0           MOVX      A,@DPTR
+   \   000018   4402         ORL       A,#0x2
+   \   00001A   F9           MOV       R1,A
+   \   00001B   12....       LCALL     `??bdb_StartCommissioning::?relay`; Banked call to: bdb_StartCommissioning
+    469                }
+    470                else
+    471                {
+    472                  //Want to try other channels?
+    473                  //try with bdb_setChannelAttribute
+    474                }
+    475              break;
+    476              case BDB_COMMISSIONING_NWK_STEERING:
+    477                if(bdbCommissioningModeMsg->bdbCommissioningStatus == BDB_COMMISSIONING_SUCCESS)
+    478                {
+    479                  //YOUR JOB:
+    480                  //We are on the nwk, what now?
+    481                }
+    482                else
+    483                {
+    484                  //See the possible errors for nwk steering procedure
+    485                  //No suitable networks found
+    486                  //Want to try other channels?
+    487                  //try with bdb_setChannelAttribute
+    488                }
+    489              break;
+    490              case BDB_COMMISSIONING_FINDING_BINDING:
+    491                if(bdbCommissioningModeMsg->bdbCommissioningStatus == BDB_COMMISSIONING_SUCCESS)
+    492                {
+    493                  //YOUR JOB:
+    494                }
+    495                else
+    496                {
+    497                  //YOUR JOB:
+    498                  //retry?, wait for user interaction?
+    499                }
+    500              break;
+    501              case BDB_COMMISSIONING_INITIALIZATION:
+    502                //Initialization notification can only be successful. Failure on initialization
+    503                //only happens for ZED and is notified as BDB_COMMISSIONING_PARENT_LOST notification
+    504          
+    505                //YOUR JOB:
+    506                //We are on a network, what now?
+    507          
+    508              break;
+    509          #if ZG_BUILD_ENDDEVICE_TYPE    
+    510              case BDB_COMMISSIONING_PARENT_LOST:
+    511                if(bdbCommissioningModeMsg->bdbCommissioningStatus == BDB_COMMISSIONING_NETWORK_RESTORED)
+    512                {
+    513                  //We did recover from losing parent
+    514                }
+    515                else
+    516                {
+    517                  //Parent not found, attempt to rejoin again after a fixed delay
+    518                  osal_start_timerEx(zclMyLight_TaskID, MYLIGHT_END_DEVICE_REJOIN_EVT, MYLIGHT_END_DEVICE_REJOIN_DELAY);
+    519                }
+    520              break;
+    521          #endif 
+    522            }
+    523          }
+   \                     ??zclMyLight_ProcessCommissioningStatus_0:
+   \   00001E                REQUIRE ?Subroutine1
+   \   00001E                ; // Fall through to label ?Subroutine1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   D083         POP       DPH
+   \   000002   D082         POP       DPL
+   \   000004   02....       LJMP      ?BRET
+    524          
+    525          /*********************************************************************
+    526           * @fn      zclMyLight_ProcessIdentifyTimeChange
+    527           *
+    528           * @brief   Called to process any change to the IdentifyTime attribute.
+    529           *
+    530           * @param   endpoint - in which the identify has change
+    531           *
+    532           * @return  none
+    533           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    534          static void zclMyLight_ProcessIdentifyTimeChange( uint8 endpoint )
+   \                     zclMyLight_ProcessIdentifyTimeChange:
+    535          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    536            (void) endpoint;
+    537          
+    538            if ( zclMyLight_IdentifyTime > 0 )
+   \   000004   90....       MOV       DPTR,#zclMyLight_IdentifyTime
+   \   000007   E0           MOVX      A,@DPTR
+   \   000008   F8           MOV       R0,A
+   \   000009   A3           INC       DPTR
+   \   00000A   E0           MOVX      A,@DPTR
+   \   00000B   F9           MOV       R1,A
+   \   00000C   E8           MOV       A,R0
+   \   00000D   49           ORL       A,R1
+   \   00000E   600F         JZ        ??zclMyLight_ProcessIdentifyTimeChange_0
+    539            {
+    540              HalLedBlink ( HAL_LED_2, 0xFF, HAL_LED_DEFAULT_DUTY_CYCLE, HAL_LED_DEFAULT_FLASH_TIME );
+   \   000010                ; Setup parameters for call to function HalLedBlink
+   \   000010   7CE8         MOV       R4,#-0x18
+   \   000012   7D03         MOV       R5,#0x3
+   \   000014   7B05         MOV       R3,#0x5
+   \   000016   7AFF         MOV       R2,#-0x1
+   \   000018   7902         MOV       R1,#0x2
+   \   00001A   12....       LCALL     `??HalLedBlink::?relay`; Banked call to: HalLedBlink
+   \   00001D   8007         SJMP      ??zclMyLight_ProcessIdentifyTimeChange_1
+    541            }
+    542            else
+    543            {
+    544              HalLedSet ( HAL_LED_2, HAL_LED_MODE_OFF );
+   \                     ??zclMyLight_ProcessIdentifyTimeChange_0:
+   \   00001F                ; Setup parameters for call to function HalLedSet
+   \   00001F   7A00         MOV       R2,#0x0
+   \   000021   7902         MOV       R1,#0x2
+   \   000023   12....       LCALL     `??HalLedSet::?relay`; Banked call to: HalLedSet
+    545            }
+    546          }
+   \                     ??zclMyLight_ProcessIdentifyTimeChange_1:
+   \   000026   80..         SJMP      ?Subroutine1
+    547          
+    548          /*********************************************************************
+    549           * @fn      zclMyLight_BindNotification
+    550           *
+    551           * @brief   Called when a new bind is added.
+    552           *
+    553           * @param   data - pointer to new bind data
+    554           *
+    555           * @return  none
+    556           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    557          static void zclMyLight_BindNotification( bdbBindNotificationData_t *data )
+   \                     zclMyLight_BindNotification:
+    558          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    559            // MYLIGHT_TODO: process the new bind information
+    560          }
+   \   000000   02....       LJMP      ?BRET
+    561          
+    562          
+    563          /*********************************************************************
+    564           * @fn      zclMyLight_ProcessTouchlinkTargetEnable
+    565           *
+    566           * @brief   Called to process when the touchlink target functionality
+    567           *          is enabled or disabled
+    568           *
+    569           * @param   none
+    570           *
+    571           * @return  none
+    572           */
+    573          #if ( defined ( BDB_TL_TARGET ) && (BDB_TOUCHLINK_CAPABILITY_ENABLED == TRUE) )
+    574          static void zclMyLight_ProcessTouchlinkTargetEnable( uint8 enable )
+    575          {
+    576            if ( enable )
+    577            {
+    578              HalLedSet ( HAL_LED_1, HAL_LED_MODE_ON );
+    579            }
+    580            else
+    581            {
+    582              HalLedSet ( HAL_LED_1, HAL_LED_MODE_OFF );
+    583            }
+    584          }
+    585          #endif
+    586          
+    587          /*********************************************************************
+    588           * @fn      zclMyLight_BasicResetCB
+    589           *
+    590           * @brief   Callback from the ZCL General Cluster Library
+    591           *          to set all the Basic Cluster attributes to default values.
+    592           *
+    593           * @param   none
+    594           *
+    595           * @return  none
+    596           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    597          static void zclMyLight_BasicResetCB( void )
+   \                     zclMyLight_BasicResetCB:
+    598          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    599          
+    600            /* MYLIGHT_TODO: remember to update this function with any
+    601               application-specific cluster attribute variables */
+    602            
+    603            zclMyLight_ResetAttributesToDefaultValues();
+   \   000004                ; Setup parameters for call to function zclMyLight_ResetAttributesToDefaultValues
+   \   000004   12....       LCALL     `??zclMyLight_ResetAttributesToDefaultValues::?r`; Banked call to: zclMyLight_ResetAttributesToDefaultValues
+    604            
+    605          }
+   \   000007   80..         SJMP      ?Subroutine1
+    606          /*********************************************************************
+    607           * @fn      zclSampleApp_BatteryWarningCB
+    608           *
+    609           * @brief   Called to handle battery-low situation.
+    610           *
+    611           * @param   voltLevel - level of severity
+    612           *
+    613           * @return  none
+    614           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    615          void zclSampleApp_BatteryWarningCB( uint8 voltLevel )
+   \                     zclSampleApp_BatteryWarningCB:
+    616          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    617            if ( voltLevel == VOLT_LEVEL_CAUTIOUS )
+    618            {
+    619              // Send warning message to the gateway and blink LED
+    620            }
+    621            else if ( voltLevel == VOLT_LEVEL_BAD )
+    622            {
+    623              // Shut down the system
+    624            }
+    625          }
+   \   000000   02....       LJMP      ?BRET
+    626          
+    627          /******************************************************************************
+    628           *
+    629           *  Functions for processing ZCL Foundation incoming Command/Response messages
+    630           *
+    631           *****************************************************************************/
+    632          
+    633          /*********************************************************************
+    634           * @fn      zclMyLight_ProcessIncomingMsg
+    635           *
+    636           * @brief   Process ZCL Foundation incoming message
+    637           *
+    638           * @param   pInMsg - pointer to the received message
+    639           *
+    640           * @return  none
+    641           */
+    642          static void zclMyLight_ProcessIncomingMsg( zclIncomingMsg_t *pInMsg )
+    643          {
+    644            switch ( pInMsg->zclHdr.commandID )
+    645            {
+    646          #ifdef ZCL_READ
+    647              case ZCL_CMD_READ_RSP:
+    648                zclMyLight_ProcessInReadRspCmd( pInMsg );
+    649                break;
+    650          #endif
+    651          #ifdef ZCL_WRITE
+    652              case ZCL_CMD_WRITE_RSP:
+    653                zclMyLight_ProcessInWriteRspCmd( pInMsg );
+    654                break;
+    655          #endif
+    656              case ZCL_CMD_CONFIG_REPORT:
+    657              case ZCL_CMD_CONFIG_REPORT_RSP:
+    658              case ZCL_CMD_READ_REPORT_CFG:
+    659              case ZCL_CMD_READ_REPORT_CFG_RSP:
+    660              case ZCL_CMD_REPORT:
+    661                //bdb_ProcessIncomingReportingMsg( pInMsg );
+    662                break;
+    663                
+    664              case ZCL_CMD_DEFAULT_RSP:
+    665                zclMyLight_ProcessInDefaultRspCmd( pInMsg );
+    666                break;
+    667          #ifdef ZCL_DISCOVER
+    668              case ZCL_CMD_DISCOVER_CMDS_RECEIVED_RSP:
+    669                zclMyLight_ProcessInDiscCmdsRspCmd( pInMsg );
+    670                break;
+    671          
+    672              case ZCL_CMD_DISCOVER_CMDS_GEN_RSP:
+    673                zclMyLight_ProcessInDiscCmdsRspCmd( pInMsg );
+    674                break;
+    675          
+    676              case ZCL_CMD_DISCOVER_ATTRS_RSP:
+    677                zclMyLight_ProcessInDiscAttrsRspCmd( pInMsg );
+    678                break;
+    679          
+    680              case ZCL_CMD_DISCOVER_ATTRS_EXT_RSP:
+    681                zclMyLight_ProcessInDiscAttrsExtRspCmd( pInMsg );
+    682                break;
+    683          #endif
+    684              default:
+    685                break;
+    686            }
+    687          
+    688            if ( pInMsg->attrCmd )
+    689              osal_mem_free( pInMsg->attrCmd );
+    690          }
+    691          
+    692          #ifdef ZCL_READ
+    693          /*********************************************************************
+    694           * @fn      zclMyLight_ProcessInReadRspCmd
+    695           *
+    696           * @brief   Process the "Profile" Read Response Command
+    697           *
+    698           * @param   pInMsg - incoming message to process
+    699           *
+    700           * @return  none
+    701           */
+    702          static uint8 zclMyLight_ProcessInReadRspCmd( zclIncomingMsg_t *pInMsg )
+    703          {
+    704            zclReadRspCmd_t *readRspCmd;
+    705            uint8 i;
+    706          
+    707            readRspCmd = (zclReadRspCmd_t *)pInMsg->attrCmd;
+    708            for (i = 0; i < readRspCmd->numAttr; i++)
+    709            {
+    710              // Notify the originator of the results of the original read attributes
+    711              // attempt and, for each successfull request, the value of the requested
+    712              // attribute
+    713            }
+    714          
+    715            return ( TRUE );
+    716          }
+    717          #endif // ZCL_READ
+    718          
+    719          #ifdef ZCL_WRITE
+    720          /*********************************************************************
+    721           * @fn      zclMyLight_ProcessInWriteRspCmd
+    722           *
+    723           * @brief   Process the "Profile" Write Response Command
+    724           *
+    725           * @param   pInMsg - incoming message to process
+    726           *
+    727           * @return  none
+    728           */
+    729          static uint8 zclMyLight_ProcessInWriteRspCmd( zclIncomingMsg_t *pInMsg )
+    730          {
+    731            zclWriteRspCmd_t *writeRspCmd;
+    732            uint8 i;
+    733          
+    734            writeRspCmd = (zclWriteRspCmd_t *)pInMsg->attrCmd;
+    735            for ( i = 0; i < writeRspCmd->numAttr; i++ )
+    736            {
+    737              // Notify the device of the results of the its original write attributes
+    738              // command.
+    739            }
+    740          
+    741            return ( TRUE );
+    742          }
+    743          #endif // ZCL_WRITE
+    744          
+    745          /*********************************************************************
+    746           * @fn      zclMyLight_ProcessInDefaultRspCmd
+    747           *
+    748           * @brief   Process the "Profile" Default Response Command
+    749           *
+    750           * @param   pInMsg - incoming message to process
+    751           *
+    752           * @return  none
+    753           */
+    754          static uint8 zclMyLight_ProcessInDefaultRspCmd( zclIncomingMsg_t *pInMsg )
+    755          {
+    756            // zclDefaultRspCmd_t *defaultRspCmd = (zclDefaultRspCmd_t *)pInMsg->attrCmd;
+    757          
+    758            // Device is notified of the Default Response command.
+    759            (void)pInMsg;
+    760          
+    761            return ( TRUE );
+    762          }
+    763          
+    764          #ifdef ZCL_DISCOVER
+    765          /*********************************************************************
+    766           * @fn      zclMyLight_ProcessInDiscCmdsRspCmd
+    767           *
+    768           * @brief   Process the Discover Commands Response Command
+    769           *
+    770           * @param   pInMsg - incoming message to process
+    771           *
+    772           * @return  none
+    773           */
+    774          static uint8 zclMyLight_ProcessInDiscCmdsRspCmd( zclIncomingMsg_t *pInMsg )
+    775          {
+    776            zclDiscoverCmdsCmdRsp_t *discoverRspCmd;
+    777            uint8 i;
+    778          
+    779            discoverRspCmd = (zclDiscoverCmdsCmdRsp_t *)pInMsg->attrCmd;
+    780            for ( i = 0; i < discoverRspCmd->numCmd; i++ )
+    781            {
+    782              // Device is notified of the result of its attribute discovery command.
+    783            }
+    784          
+    785            return ( TRUE );
+    786          }
+    787          
+    788          /*********************************************************************
+    789           * @fn      zclMyLight_ProcessInDiscAttrsRspCmd
+    790           *
+    791           * @brief   Process the "Profile" Discover Attributes Response Command
+    792           *
+    793           * @param   pInMsg - incoming message to process
+    794           *
+    795           * @return  none
+    796           */
+    797          static uint8 zclMyLight_ProcessInDiscAttrsRspCmd( zclIncomingMsg_t *pInMsg )
+    798          {
+    799            zclDiscoverAttrsRspCmd_t *discoverRspCmd;
+    800            uint8 i;
+    801          
+    802            discoverRspCmd = (zclDiscoverAttrsRspCmd_t *)pInMsg->attrCmd;
+    803            for ( i = 0; i < discoverRspCmd->numAttr; i++ )
+    804            {
+    805              // Device is notified of the result of its attribute discovery command.
+    806            }
+    807          
+    808            return ( TRUE );
+    809          }
+    810          
+    811          /*********************************************************************
+    812           * @fn      zclMyLight_ProcessInDiscAttrsExtRspCmd
+    813           *
+    814           * @brief   Process the "Profile" Discover Attributes Extended Response Command
+    815           *
+    816           * @param   pInMsg - incoming message to process
+    817           *
+    818           * @return  none
+    819           */
+    820          static uint8 zclMyLight_ProcessInDiscAttrsExtRspCmd( zclIncomingMsg_t *pInMsg )
+    821          {
+    822            zclDiscoverAttrsExtRsp_t *discoverRspCmd;
+    823            uint8 i;
+    824          
+    825            discoverRspCmd = (zclDiscoverAttrsExtRsp_t *)pInMsg->attrCmd;
+    826            for ( i = 0; i < discoverRspCmd->numAttr; i++ )
+    827            {
+    828              // Device is notified of the result of its attribute discovery command.
+    829            }
+    830          
+    831            return ( TRUE );
+    832          }
+    833          #endif // ZCL_DISCOVER
+    834          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    835          void zclMyLight_ReportTemp( void )
+   \                     zclMyLight_ReportTemp:
+    836          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000   74F4         MOV       A,#-0xc
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+    837            // ?????? ???????????
+    838            zclMyLight_MeasuredValue = (int16)3610;
+   \   000005   90....       MOV       DPTR,#zclMyLight_MeasuredValue
+   \   000008   741A         MOV       A,#0x1a
+   \   00000A   F0           MOVX      @DPTR,A
+   \   00000B   A3           INC       DPTR
+   \   00000C   740E         MOV       A,#0xe
+   \   00000E   F0           MOVX      @DPTR,A
+    839            HumidityValue = 16.25;
+   \   00000F   90....       MOV       DPTR,#HumidityValue
+   \   000012   E4           CLR       A
+   \   000013   F0           MOVX      @DPTR,A
+   \   000014   A3           INC       DPTR
+   \   000015   F0           MOVX      @DPTR,A
+   \   000016   A3           INC       DPTR
+   \   000017   7482         MOV       A,#-0x7e
+   \   000019   F0           MOVX      @DPTR,A
+   \   00001A   A3           INC       DPTR
+   \   00001B   7441         MOV       A,#0x41
+   \   00001D   F0           MOVX      @DPTR,A
+    840            const uint8 NUM_ATTRIBUTES = 2;
+    841          
+    842            zclReportCmd_t *pReportCmd;
+    843          
+    844            pReportCmd = osal_mem_alloc(sizeof(zclReportCmd_t) +
+    845                                        (NUM_ATTRIBUTES * sizeof(zclReport_t)));
+   \   00001E                ; Setup parameters for call to function osal_mem_alloc
+   \   00001E   7A0B         MOV       R2,#0xb
+   \   000020   7B00         MOV       R3,#0x0
+   \   000022   12....       LCALL     `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
+   \   000025   8A..         MOV       ?V0,R2
+   \   000027   8B..         MOV       ?V1,R3
+    846            if (pReportCmd != NULL) {
+   \   000029   EA           MOV       A,R2
+   \   00002A   4B           ORL       A,R3
+   \   00002B   607E         JZ        ??zclMyLight_ReportTemp_0
+    847              pReportCmd->numAttr = NUM_ATTRIBUTES;
+   \   00002D   8A82         MOV       DPL,R2
+   \   00002F   8B83         MOV       DPH,R3
+   \   000031   7402         MOV       A,#0x2
+   \   000033   F0           MOVX      @DPTR,A
+    848          
+    849              pReportCmd->attrList[0].attrID = 40000;
+   \   000034   A3           INC       DPTR
+   \   000035   7440         MOV       A,#0x40
+   \   000037   F0           MOVX      @DPTR,A
+   \   000038   A3           INC       DPTR
+   \   000039   749C         MOV       A,#-0x64
+   \   00003B   12....       LCALL     ?Subroutine6 & 0xFFFF
+    850              pReportCmd->attrList[0].dataType = ZCL_DATATYPE_INT16;
+   \                     ??CrossCallReturnLabel_8:
+   \   00003E   7429         MOV       A,#0x29
+   \   000040   12....       LCALL     ?Subroutine4 & 0xFFFF
+    851              pReportCmd->attrList[0].attrData = (void *)(&zclMyLight_MeasuredValue);
+   \                     ??CrossCallReturnLabel_4:
+   \   000043   74..         MOV       A,#zclMyLight_MeasuredValue & 0xff
+   \   000045   F0           MOVX      @DPTR,A
+   \   000046   A3           INC       DPTR
+   \   000047   74..         MOV       A,#(zclMyLight_MeasuredValue >> 8) & 0xff
+   \   000049   12....       LCALL     ?Subroutine4 & 0xFFFF
+    852          
+    853              pReportCmd->attrList[1].attrID = 40001;
+   \                     ??CrossCallReturnLabel_5:
+   \   00004C   A3           INC       DPTR
+   \   00004D   A3           INC       DPTR
+   \   00004E   7441         MOV       A,#0x41
+   \   000050   F0           MOVX      @DPTR,A
+   \   000051   A3           INC       DPTR
+   \   000052   749C         MOV       A,#-0x64
+   \   000054   12....       LCALL     ?Subroutine2 & 0xFFFF
+    854              pReportCmd->attrList[1].dataType = ZCL_DATATYPE_SINGLE_PREC;
+   \                     ??CrossCallReturnLabel_0:
+   \   000057   7439         MOV       A,#0x39
+   \   000059   12....       LCALL     ?Subroutine2 & 0xFFFF
+    855              pReportCmd->attrList[1].attrData = (void *)(&HumidityValue);
+   \                     ??CrossCallReturnLabel_1:
+   \   00005C   A3           INC       DPTR
+   \   00005D   74..         MOV       A,#HumidityValue & 0xff
+   \   00005F   F0           MOVX      @DPTR,A
+   \   000060   A3           INC       DPTR
+   \   000061   74..         MOV       A,#(HumidityValue >> 8) & 0xff
+   \   000063   F0           MOVX      @DPTR,A
+    856              
+    857              zclMyLight_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
+   \   000064   90....       MOV       DPTR,#zclMyLight_DstAddr + 8
+   \   000067   7402         MOV       A,#0x2
+   \   000069   F0           MOVX      @DPTR,A
+    858              zclMyLight_DstAddr.addr.shortAddr = 0;
+   \   00006A   90....       MOV       DPTR,#zclMyLight_DstAddr
+   \   00006D   E4           CLR       A
+   \   00006E   F0           MOVX      @DPTR,A
+   \   00006F   A3           INC       DPTR
+   \   000070   F0           MOVX      @DPTR,A
+    859              zclMyLight_DstAddr.endPoint = 1;
+   \   000071   90....       MOV       DPTR,#zclMyLight_DstAddr + 9
+   \   000074   04           INC       A
+   \   000075   F0           MOVX      @DPTR,A
+    860          
+    861              zcl_SendReportCmd(MYLIGHT_ENDPOINT, &zclMyLight_DstAddr,
+    862                                ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT, pReportCmd,
+    863                                ZCL_FRAME_CLIENT_SERVER_DIR, false, SeqNum++);
+   \   000076   90....       MOV       DPTR,#SeqNum
+   \   000079   E0           MOVX      A,@DPTR
+   \   00007A   F8           MOV       R0,A
+   \   00007B   7401         MOV       A,#0x1
+   \   00007D   28           ADD       A,R0
+   \   00007E   F0           MOVX      @DPTR,A
+   \   00007F                ; Setup parameters for call to function zcl_SendReportCmd
+   \   00007F   E8           MOV       A,R0
+   \   000080   F5..         MOV       ?V2,A
+   \   000082   78..         MOV       R0,#?V2
+   \   000084   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   000087   75..00       MOV       ?V2,#0x0
+   \   00008A   78..         MOV       R0,#?V2
+   \   00008C   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   00008F   78..         MOV       R0,#?V2
+   \   000091   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   000094   78..         MOV       R0,#?V0
+   \   000096   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000099   7C02         MOV       R4,#0x2
+   \   00009B   7D04         MOV       R5,#0x4
+   \   00009D   7A..         MOV       R2,#zclMyLight_DstAddr & 0xff
+   \   00009F   7B..         MOV       R3,#(zclMyLight_DstAddr >> 8) & 0xff
+   \   0000A1   7901         MOV       R1,#0x1
+   \   0000A3   12....       LCALL     `??zcl_SendReportCmd::?relay`; Banked call to: zcl_SendReportCmd
+   \   0000A6   7405         MOV       A,#0x5
+   \   0000A8   12....       LCALL     ?DEALLOC_XSTACK8
+    864            }
+    865          
+    866            osal_mem_free(pReportCmd);
+   \                     ??zclMyLight_ReportTemp_0:
+   \   0000AB                ; Setup parameters for call to function osal_mem_free
+   \   0000AB   AA..         MOV       R2,?V0
+   \   0000AD   AB..         MOV       R3,?V1
+   \   0000AF   12....       LCALL     `??osal_mem_free::?relay`; Banked call to: osal_mem_free
+    867          }
+   \   0000B2   02....       LJMP      ?Subroutine0 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   12....       LCALL     ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_6:
+   \   000003   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   12....       LCALL     ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_9:
+   \   000003   A3           INC       DPTR
+   \   000004   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine6:
+   \   000000   F0           MOVX      @DPTR,A
+   \   000001   8A82         MOV       DPL,R2
+   \   000003   8B83         MOV       DPH,R3
+   \   000005   A3           INC       DPTR
+   \   000006   A3           INC       DPTR
+   \   000007   A3           INC       DPTR
+   \   000008   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   12....       LCALL     ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_7:
+   \   000003   A3           INC       DPTR
+   \   000004   A3           INC       DPTR
+   \   000005   A3           INC       DPTR
+   \   000006   A3           INC       DPTR
+   \   000007   22           RET
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclMyLight_NwkState>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for zclMyLight_CmdCallbacks>`:
+   \   000000   ....         DW `??zclMyLight_BasicResetCB::?relay`
+   \   000002   0000         DW 0H
+   \   000004   0000         DW 0H
+   \   000006   0000         DW 0H
+   \   000008   0000         DW 0H
+   \   00000A   0000         DW 0H
+   \   00000C   0000         DW 0H
+   \   00000E   0000         DW 0H
+   \   000010   0000         DW 0H
+   \   000012   0000         DW 0H
+   \   000014   0000         DW 0H
+   \   000016   0000         DW 0H
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "start">`:
+   \   000000   73746172     DB "start"
+   \            7400    
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_bb8:
+   \   000000   B80B0000     DD 3000
+    868          /****************************************************************************
+    869          ****************************************************************************/
+    870          
+    871          
+
+   Maximum stack usage in bytes:
+
+   ISTACK XSTACK Function
+   ------ ------ --------
+      2      0   zclMyLight_BasicResetCB
+        2      0   -> zclMyLight_ResetAttributesToDefaultValues
+      0      0   zclMyLight_BindNotification
+      0     13   zclMyLight_Init
+        0      9   -> RegisterForKeys
+        0      9   -> RegisterVoltageWarningCB
+        0      9   -> UART_Init
+        0      9   -> UART_String
+        0      9   -> bdb_RegisterBindNotificationCB
+        0      9   -> bdb_RegisterCommissioningStatusCB
+        0      9   -> bdb_RegisterIdentifyTimeChangeCB
+        0      9   -> bdb_RegisterSimpleDescriptor
+        0      9   -> bdb_StartCommissioning
+        0     13   -> osal_start_reload_timer
+        0      9   -> zclGeneral_RegisterCmdCallbacks
+        0      9   -> zcl_registerAttrList
+        0      9   -> zcl_registerForMsg
+      2      0   zclMyLight_ProcessCommissioningStatus
+        2      0   -> bdb_StartCommissioning
+      2      0   zclMyLight_ProcessIdentifyTimeChange
+        2      0   -> HalLedBlink
+        2      0   -> HalLedSet
+      0     29   zclMyLight_ReportTemp
+        0     12   -> osal_mem_alloc
+        0     12   -> osal_mem_free
+        0     17   -> zcl_SendReportCmd
+      0     12   zclMyLight_event_loop
+        0     12   -> bdb_StartCommissioning
+        0     12   -> bdb_resetLocalAction
+        0     12   -> osal_mem_free
+        0     12   -> osal_msg_deallocate
+        0     12   -> osal_msg_receive
+        0     12   -> zclMyLight_ReportTemp
+      0      0   zclSampleApp_BatteryWarningCB
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       6  ?<Constant "start">
+      24  ?<Initializer for zclMyLight_CmdCallbacks>
+       1  ?<Initializer for zclMyLight_NwkState>
+       5  ?Subroutine0
+       7  ?Subroutine1
+       8  ?Subroutine2
+      15  ?Subroutine3
+       4  ?Subroutine4
+       5  ?Subroutine5
+       9  ?Subroutine6
+       4  HumidityValue
+       1  P0DIR
+       1  P0SEL
+       1  SeqNum
+       1  _A_P0
+       4  __Constant_bb8
+       1  gPermitDuration
+       1  giGenAppScreenMode
+       9  zclMyLight_BasicResetCB
+       3  zclMyLight_BindNotification
+      24  zclMyLight_CmdCallbacks
+      12  zclMyLight_DstAddr
+     137  zclMyLight_Init
+       1  zclMyLight_NwkState
+      30  zclMyLight_ProcessCommissioningStatus
+      40  zclMyLight_ProcessIdentifyTimeChange
+     181  zclMyLight_ReportTemp
+       1  zclMyLight_TaskID
+     283  zclMyLight_event_loop
+       3  zclSampleApp_BatteryWarningCB
+      48  -- Other
+
+ 
+ 739 bytes in segment BANKED_CODE
+  48 bytes in segment BANK_RELAYS
+   3 bytes in segment SFR_AN
+  25 bytes in segment XDATA_I
+  25 bytes in segment XDATA_ID
+  10 bytes in segment XDATA_ROM_C
+  20 bytes in segment XDATA_Z
+ 
+  73 bytes of CODE     memory
+   6 bytes of CONST    memory (+ 4 bytes shared)
+   0 bytes of DATA     memory (+ 3 bytes shared)
+ 739 bytes of HUGECODE memory
+  45 bytes of XDATA    memory
+
+Errors: none
+Warnings: none

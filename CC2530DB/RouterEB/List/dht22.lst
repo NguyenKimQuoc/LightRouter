@@ -1,0 +1,417 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               26/Dec/2021  21:39:06
+# Copyright 2004-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\Source\dht22.c
+#    Command line       =  
+#        -f C:\Users\QUOCKI~1\AppData\Local\Temp\EWE207.tmp ("E:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\Source\dht22.c" -lC
+#        "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\RouterEB\List"
+#        -lA "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\RouterEB\List"
+#        --diag_suppress Pe001,Pa010 -o "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\RouterEB\Obj" -e
+#        --debug --core=plain --dptr=16,1 --data_model=large
+#        --code_model=banked --calling_convention=xdata_reentrant
+#        --place_constants=data_rom --nr_virtual_regs 16 --preinclude "E:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\Source\preinclude.h"
+#        -f "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\Tools\CC2530DB\f8wRouter.cfg"
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+#        -DRTR_NWK) -f "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
+#        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DZDAPP_CONFIG_PAN_ID=0xFFFF -DNWK_START_DELAY=100
+#        -DEXTENDED_JOINING_RANDOM_MASK=0x007F -DBEACON_REQUEST_DELAY=100
+#        -DBEACON_REQ_DELAY_MASK=0x00FF -DLINK_STATUS_JITTER_MASK=0x007F
+#        -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_POLLED=3000
+#        -DNWK_INDIRECT_MSG_TIMEOUT=7 -DMAX_RREQ_ENTRIES=8
+#        -DAPSC_MAX_FRAME_RETRIES=3 -DNWK_MAX_DATA_RETRIES=2
+#        -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9 -DAPS_MAX_GROUPS=16
+#        -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
+#        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000
+#        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
+#        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
+#        -f "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\" -I "E:\Texas
+#        Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\Source\" -I
+#        "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\Source\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\ZMain\TI2530DB\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\hal\include\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\mac\include\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\mac\high_level\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\mt\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\osal\include\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\services\saddr\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\services\sdata\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\af\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\nwk\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\bdb\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\gp\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\sapi\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\sec\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\sys\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\zcl\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\stack\zdo\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\zmac\"
+#        -I "E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\..\..\..\..\..\Components\zmac\f8w\"
+#        -Ohz --require_prototypes)
+#    Locale             =  English_USA.1252
+#    List file          =  
+#        E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\RouterEB\List\dht22.lst
+#    Object file        =  
+#        E:\Texas Instruments\Z-Stack
+#        3.0.2\Projects\zstack\HomeAutomation\MyLight\CC2530DB\RouterEB\Obj\dht22.r51
+#
+###############################################################################
+
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+E:\Texas Instruments\Z-Stack 3.0.2\Projects\zstack\HomeAutomation\MyLight\Source\dht22.c
+      1          #include <stdio.h>
+      2          #include "onboard.h"
+      3          #include "bitmasks.h"
+      4          #include "delay.h"
+      5          #include "dht22.h"
+      6          #include "uart.h"
+      7          //#include "global.h"
+      8          #define DHT11 P0_5
+      9          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     10          int Receive_data(void)  /* Receive data */
+   \                     Receive_data:
+     11          {
+   \   000000                REQUIRE ?V0
+   \   000000   74F7         MOV       A,#-0x9
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+     12           int q,c=0; 
+   \   000005   7E00         MOV       R6,#0x0
+   \   000007   7F00         MOV       R7,#0x0
+     13           for (q=0; q<8; q++)
+   \   000009   75..08       MOV       ?V0,#0x8
+     14           {
+     15             
+     16            while(DHT11==0);/* check received bit 0 or 1 */
+   \                     ??Receive_data_0:
+   \   00000C   A285         MOV       C,0x80.5
+   \   00000E   50FC         JNC       ??Receive_data_0
+     17            _delay_us(40);
+   \   000010                ; Setup parameters for call to function _delay_us
+   \   000010   7A28         MOV       R2,#0x28
+   \   000012   7B00         MOV       R3,#0x0
+   \   000014   12....       LCALL     `??_delay_us::?relay`; Banked call to: _delay_us
+     18            if(DHT11 == 1) /* If high pulse is greater than 30ms */
+   \   000017   EE           MOV       A,R6
+   \   000018   25E0         ADD       A,0xE0 /* A   */
+   \   00001A   FE           MOV       R6,A
+   \   00001B   EF           MOV       A,R7
+   \   00001C   33           RLC       A
+   \   00001D   FF           MOV       R7,A
+   \   00001E   EE           MOV       A,R6
+   \   00001F   A285         MOV       C,0x80.5
+   \   000021   5003         JNC       ??Receive_data_1
+     19            c = (c<<1)|(0x01);/* Then its logic HIGH */
+   \   000023   4401         ORL       A,#0x1
+   \   000025   FE           MOV       R6,A
+     20            else  /* otherwise its logic LOW */
+     21            c = (c<<1);
+     22            while(DHT11==1);
+   \                     ??Receive_data_1:
+   \   000026   A285         MOV       C,0x80.5
+   \   000028   40FC         JC        ??Receive_data_1
+     23          //  UART_String("5");
+     24           }
+   \   00002A   15..         DEC       ?V0
+   \   00002C   E5..         MOV       A,?V0
+   \   00002E   70DC         JNZ       ??Receive_data_0
+     25           return c;
+   \   000030   EE           MOV       A,R6
+   \   000031   FA           MOV       R2,A
+   \   000032   EF           MOV       A,R7
+   \   000033   FB           MOV       R3,A
+   \   000034   7F01         MOV       R7,#0x1
+   \   000036   02....       LJMP      ?BANKED_LEAVE_XDATA
+   \   000039                REQUIRE _A_P0
+     26          }
+     27          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     28          int DHT22_Measure(void){
+   \                     DHT22_Measure:
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000                REQUIRE ?V4
+   \   000000                REQUIRE ?V5
+   \   000000                REQUIRE ?V6
+   \   000000                REQUIRE ?V7
+   \   000000                REQUIRE ?V8
+   \   000000                REQUIRE ?V9
+   \   000000   74EE         MOV       A,#-0x12
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 18
+   \   000005                ; Auto size: 20
+   \   000005   74EC         MOV       A,#-0x14
+   \   000007   12....       LCALL     ?ALLOC_XSTACK8
+     29            int I_RH,D_RH,I_Temp,D_Temp,CheckSum;
+     30            char dat[20];
+     31            P0DIR |= (1<<5); 
+   \   00000A   43FD20       ORL       0xfd,#0x20
+     32            DHT11 = 1;
+   \   00000D   D285         SETB      0x80.5
+     33            _delay_ms(250);
+   \   00000F                ; Setup parameters for call to function _delay_ms
+   \   00000F   7AFA         MOV       R2,#-0x6
+   \   000011   7B00         MOV       R3,#0x0
+   \   000013   12....       LCALL     `??_delay_ms::?relay`; Banked call to: _delay_ms
+     34            DHT11 = 0; 
+   \   000016   C285         CLR       0x80.5
+     35            _delay_ms(20); 
+   \   000018                ; Setup parameters for call to function _delay_ms
+   \   000018   7A14         MOV       R2,#0x14
+   \   00001A   7B00         MOV       R3,#0x0
+   \   00001C   12....       LCALL     `??_delay_ms::?relay`; Banked call to: _delay_ms
+     36            DHT11 = 1;  
+   \   00001F   D285         SETB      0x80.5
+     37            _delay_us(30);
+   \   000021                ; Setup parameters for call to function _delay_us
+   \   000021   7A1E         MOV       R2,#0x1e
+   \   000023   7B00         MOV       R3,#0x0
+   \   000025   12....       LCALL     `??_delay_us::?relay`; Banked call to: _delay_us
+     38            P0DIR &= ~(1<<5);
+   \   000028   53FDDF       ANL       0xfd,#0xdf
+     39          //  UART_String("toi day roi");
+     40            while(DHT11==1);
+   \                     ??DHT22_Measure_0:
+   \   00002B   A285         MOV       C,0x80.5
+   \   00002D   40FC         JC        ??DHT22_Measure_0
+     41            while(DHT11==0);
+   \                     ??DHT22_Measure_1:
+   \   00002F   A285         MOV       C,0x80.5
+   \   000031   50FC         JNC       ??DHT22_Measure_1
+     42            while(DHT11==1);
+   \                     ??DHT22_Measure_2:
+   \   000033   A285         MOV       C,0x80.5
+   \   000035   40FC         JC        ??DHT22_Measure_2
+     43            I_RH=Receive_data();
+   \   000037                ; Setup parameters for call to function Receive_data
+   \   000037   12....       LCALL     `??Receive_data::?relay`; Banked call to: Receive_data
+   \   00003A   8A..         MOV       ?V2,R2
+   \   00003C   8B..         MOV       ?V3,R3
+     44            D_RH=Receive_data();
+   \   00003E                ; Setup parameters for call to function Receive_data
+   \   00003E   12....       LCALL     `??Receive_data::?relay`; Banked call to: Receive_data
+   \   000041   8A..         MOV       ?V0,R2
+   \   000043   8B..         MOV       ?V1,R3
+     45            I_Temp=Receive_data();
+   \   000045                ; Setup parameters for call to function Receive_data
+   \   000045   12....       LCALL     `??Receive_data::?relay`; Banked call to: Receive_data
+   \   000048   8A..         MOV       ?V6,R2
+   \   00004A   8B..         MOV       ?V7,R3
+     46            D_Temp=Receive_data(); 
+   \   00004C                ; Setup parameters for call to function Receive_data
+   \   00004C   12....       LCALL     `??Receive_data::?relay`; Banked call to: Receive_data
+   \   00004F   8A..         MOV       ?V4,R2
+   \   000051   8B..         MOV       ?V5,R3
+     47            CheckSum=Receive_data();
+     48            if(CheckSum == ((I_RH + D_RH + I_Temp + D_Temp)& 0xFF)){
+   \   000053                ; Setup parameters for call to function Receive_data
+   \   000053   12....       LCALL     `??Receive_data::?relay`; Banked call to: Receive_data
+   \   000056   E5..         MOV       A,?V2
+   \   000058   25..         ADD       A,?V0
+   \   00005A   25..         ADD       A,?V6
+   \   00005C   25..         ADD       A,?V4
+   \   00005E   6A           XRL       A,R2
+   \   00005F   4B           ORL       A,R3
+   \   000060   704F         JNZ       ??DHT22_Measure_3
+     49            sprintf(dat,"Hum = %d.%d",I_RH,D_RH);
+   \   000062                ; Setup parameters for call to function sprintf
+   \   000062   78..         MOV       R0,#?V0
+   \   000064   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000067   78..         MOV       R0,#?V2
+   \   000069   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   00006C   7C..         MOV       R4,#`?<Constant "Hum = %d.%d">` & 0xff
+   \   00006E   7D..         MOV       R5,#(`?<Constant "Hum = %d.%d">` >> 8) & 0xff
+   \   000070   7404         MOV       A,#0x4
+   \   000072   12....       LCALL     ?XSTACK_DISP101_8
+   \   000075   12....       LCALL     `??sprintf::?relay`; Banked call to: sprintf
+   \   000078   7404         MOV       A,#0x4
+   \   00007A   12....       LCALL     ?DEALLOC_XSTACK8
+     50            UART_String(dat);
+   \   00007D                ; Setup parameters for call to function UART_String
+   \   00007D   AA..         MOV       R2,?XSP + 0
+   \   00007F   AB..         MOV       R3,?XSP + 1
+   \   000081   12....       LCALL     `??UART_String::?relay`; Banked call to: UART_String
+     51            
+     52            sprintf(dat,"Tem = %d.%d",I_Temp,D_Temp);
+   \   000084                ; Setup parameters for call to function sprintf
+   \   000084   78..         MOV       R0,#?V4
+   \   000086   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000089   78..         MOV       R0,#?V6
+   \   00008B   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   00008E   7C..         MOV       R4,#`?<Constant "Tem = %d.%d">` & 0xff
+   \   000090   7D..         MOV       R5,#(`?<Constant "Tem = %d.%d">` >> 8) & 0xff
+   \   000092   7404         MOV       A,#0x4
+   \   000094   12....       LCALL     ?XSTACK_DISP101_8
+   \   000097   12....       LCALL     `??sprintf::?relay`; Banked call to: sprintf
+   \   00009A   7404         MOV       A,#0x4
+   \   00009C   12....       LCALL     ?DEALLOC_XSTACK8
+     53            UART_String(dat);
+   \   00009F                ; Setup parameters for call to function UART_String
+   \   00009F   AA..         MOV       R2,?XSP + 0
+   \   0000A1   AB..         MOV       R3,?XSP + 1
+   \   0000A3   12....       LCALL     `??UART_String::?relay`; Banked call to: UART_String
+     54            UART_String("--------------");
+   \   0000A6                ; Setup parameters for call to function UART_String
+   \   0000A6   7A..         MOV       R2,#`?<Constant "--------------">` & 0xff
+   \   0000A8   7B..         MOV       R3,#(`?<Constant "--------------">` >> 8) & 0xff
+   \   0000AA   12....       LCALL     `??UART_String::?relay`; Banked call to: UART_String
+     55            return 1;
+   \   0000AD   7A01         MOV       R2,#0x1
+   \   0000AF   8009         SJMP      ??DHT22_Measure_4
+     56            }else{
+     57              UART_String("ERROR");
+   \                     ??DHT22_Measure_3:
+   \   0000B1                ; Setup parameters for call to function UART_String
+   \   0000B1   7A..         MOV       R2,#`?<Constant "ERROR">` & 0xff
+   \   0000B3   7B..         MOV       R3,#(`?<Constant "ERROR">` >> 8) & 0xff
+   \   0000B5   12....       LCALL     `??UART_String::?relay`; Banked call to: UART_String
+     58              return 0;
+   \   0000B8   7A00         MOV       R2,#0x0
+   \                     ??DHT22_Measure_4:
+   \   0000BA   7B00         MOV       R3,#0x0
+   \   0000BC   7414         MOV       A,#0x14
+   \   0000BE   12....       LCALL     ?DEALLOC_XSTACK8
+   \   0000C1   7F0A         MOV       R7,#0xa
+   \   0000C3   02....       LJMP      ?BANKED_LEAVE_XDATA
+   \   0000C6                REQUIRE P0DIR
+   \   0000C6                REQUIRE _A_P0
+     59            }
+     60          }
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Hum = %d.%d">`:
+   \   000000   48756D20     DB "Hum = %d.%d"
+   \            3D202564
+   \            2E256400
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "Tem = %d.%d">`:
+   \   000000   54656D20     DB "Tem = %d.%d"
+   \            3D202564
+   \            2E256400
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "--------------">`:
+   \   000000   2D2D2D2D     DB "--------------"
+   \            2D2D2D2D
+   \            2D2D2D2D
+   \            2D2D00  
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "ERROR">`:
+   \   000000   4552524F     DB "ERROR"
+   \            5200    
+
+   Maximum stack usage in bytes:
+
+   XSTACK Function
+   ------ --------
+     42   DHT22_Measure
+       38   -> Receive_data
+       38   -> UART_String
+       38   -> _delay_ms
+       38   -> _delay_us
+       42   -> sprintf
+     47   Receive_data
+        9   -> _delay_us
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      15  ?<Constant "--------------">
+       6  ?<Constant "ERROR">
+      12  ?<Constant "Hum = %d.%d">
+      12  ?<Constant "Tem = %d.%d">
+     198  DHT22_Measure
+       1  P0DIR
+      57  Receive_data
+       1  _A_P0
+      12  -- Other
+
+ 
+ 255 bytes in segment BANKED_CODE
+  12 bytes in segment BANK_RELAYS
+   2 bytes in segment SFR_AN
+  45 bytes in segment XDATA_ROM_C
+ 
+  12 bytes of CODE     memory
+  45 bytes of CONST    memory
+   0 bytes of DATA     memory (+ 2 bytes shared)
+ 255 bytes of HUGECODE memory
+
+Errors: none
+Warnings: none
